@@ -53,7 +53,7 @@ fi
 echo Generating input file ${INPUTFILE}...
 cat ${INPUTTEMPLATE} | sed s/NUMPROCS/$NUMPROCS/ > ${INPUTFILE}
 
-RUN="$PROG $PROGARGS"
+RUN="${SUBMITCMD} $PROG $PROGARGS"
 
 echo "Running $RUN:"
 eval $RUN
