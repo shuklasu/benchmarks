@@ -972,6 +972,7 @@ my $shared_ldflag = $fields[$idx_shared_ldflag];
 my $shared_extension = $fields[$idx_shared_extension];
 my $ranlib = $fields[$idx_ranlib];
 my $arflags = $fields[$idx_arflags];
+$cflags .= " -m32 ";
 
 if ($fips)
 	{
