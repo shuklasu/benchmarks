@@ -46,8 +46,10 @@ export HOSTTYPE=i386
 ./bin/parsecmgmt -a build -p splash2x
 ```
 
-
 Following applications cannot be build:
 - splash2x.ocean_ncp
 - splash2x.volrend
- 
+
+#### Docker Builds
+A docker file is also provided in repository for building these benchmarks
+
