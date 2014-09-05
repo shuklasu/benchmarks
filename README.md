@@ -51,5 +51,6 @@ Following applications cannot be build:
 - splash2x.volrend
 
 #### Docker Builds
-A docker file is also provided in repository for building these benchmarks
+A docker file is also provided in repository for building these benchmarks.
+Automated docker builds are availabe [here](https://registry.hub.docker.com/u/sudhan345/benchmarks/)
 
