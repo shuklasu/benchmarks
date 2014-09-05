@@ -1216,7 +1216,15 @@ function run_benchmark {
       UPTCPIP_RX_THREADS=1
       export UPTCPIP_RX_THREADS
   fi 
-  eval cmd="\"${submit} ${bmexec} ${bmexec_args}\""
+
+  if [ ${bench} == "splash2x" ]; then
+      export SUBMITCMD=${submit}
+      eval cmd="\"${bmexec} ${bmexec_args}\""
+  else
+      eval cmd="\"${submit} ${bmexec} ${bmexec_args}\""
+  fi
+
+  #eval cmd="\"${submit} ${bmexec} ${bmexec_args}\""
   echo "${oprefix} Running '${cmd}':" | ${TEE} ${log}
   echo "${oprefix} [---------- Beginning of output ----------]" | ${TEE} ${log}
   (eval ${cmd} 2>&1) 2>&1 | ${TEE} ${bmrundir}/benchmark.out | ${TEE} ${log}
